@@ -1,0 +1,46 @@
+<h1>City Create Form</h1>
+<form [formGroup]="CityForm" (ngSubmit)="createCity()">
+  <table>
+
+    <tr>
+      <td>name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+
+    <tr>
+      <td>country:</td>
+      <td>
+        <select formControlName="country">
+          <option [value]="country.id" *ngFor="let country of country">{{country.name}} </option>
+        </select>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>area</td>
+      <td><input type="text" formControlName="area"></td>
+    </tr>
+
+    <tr>
+      <td>population</td>
+      <td><input type="text" formControlName="population"></td>
+    </tr>
+
+    <tr>
+      <td>gdp</td>
+      <td><input type="text" formControlName="gdp"></td>
+    </tr>
+
+    <tr>
+      <td>description</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button >Add</button>
+      </td>
+    </tr>
+  </table>
+</form>

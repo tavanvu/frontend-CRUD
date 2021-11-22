@@ -1,0 +1,29 @@
+<h1>City List Form</h1>
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <td>#</td>
+    <td>name</td>
+    <td>country</td>
+    <td>area</td>
+    <td>population</td>
+    <td>gpd</td>
+    <td>description</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let city of citys ;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{city.name}}</td>
+    <td>{{city.country.name}}</td>
+    <td>{{city.area}}</td>
+    <td>{{city.population}}</td>
+    <td>{{city.gdp}}</td>
+    <td>{{city.description}}</td>
+    <td><a routerLink="/city/edit/{{city.id}}">Edit</a></td>
+    <td><a routerLink="/city/delete/{{city.id}}">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
