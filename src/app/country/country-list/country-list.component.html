@@ -1,0 +1,23 @@
+<h1>Country List Form</h1>
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <td>#</td>
+    <td>name</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countrys ;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{country.name}}</td>
+    <td><a routerLink="/country/edit/{{country.id}}">Edit</a></td>
+    <td><a routerLink="/country/delete/{{country.id}}">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
+<tbody>
+<a routerLink="/country/create" > Them moi san pham</a>
+</tbody>
+

@@ -6,6 +6,9 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./city/city.module').then(module => module.CityModule)
+  }, {
+    path: 'country',
+    loadChildren: () => import('./country/country.module').then(module => module.CountryModule)
   }
 ];
 
